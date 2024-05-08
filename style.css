@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.body {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  
+}
+
+.container {
+  max-width: 800px;
+  background: #f9f9f9;
+  padding: 30px;
+  align-items: center;
+  text-align: center;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.container h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#input-name, #input-number{
+    padding: 10px;
+    border: 1px solid #ccc; 
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+button:hover { 
+
+    background-color: #45a049; 
+} 
+
+.expense-table{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th{
+    background-color: #f2f2f2;
+    padding: 12px;
+    text-align: left;
+}
+
+tbody td { 
+    padding: 10px; 
+    text-align: left;
+    border-top: 1px solid #ddd; 
+} 
+
+.total-amount{
+    padding: 10px;
+    text-align: right;
+    background-color: #f2f2f2;
+    
+}
+
+.delete-btn{
+    color: red;
+    cursor: pointer;
+}
+
+
+
+
