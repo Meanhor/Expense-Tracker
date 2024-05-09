@@ -61,7 +61,6 @@ function addExpense(event) {
   renderExpense();
 }
 
-
 function deleteExpense(event) {
   if (event.target.classList.contains("delete-btn")) {
     const expenseIndex = parseInt(event.target.getAttribute("data-id"));
@@ -70,8 +69,8 @@ function deleteExpense(event) {
   }
 }
 
-
-
 expenseForm.addEventListener("submit", addExpense);
 expenseList.addEventListener("click", deleteExpense);
 renderExpense();
+
+document.getElementById("designer").innerText = "MeanhorKea";
