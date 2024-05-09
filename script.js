@@ -18,7 +18,8 @@ function renderExpense() {
 
     expenseRow.innerHTML = `
         <td>${expense.name}</td>
-        <td>${expense.amount}</td> <!-- Change here -->
+        <td>$${expense.amount}</td> <!-- Change here -->
+        <td>${expense.type}</td>
         <td class="delete-btn" data-id="${i}">Delete</td>
         `;
 
@@ -38,15 +39,18 @@ function addExpense(event) {
   // Initial the input variable
   const expenseNameInput = document.getElementById("input-name");
   const amountexpenseInput = document.getElementById("input-number");
+  const expenseTypeInput = document.getElementById("input-type");
   const expenseName = expenseNameInput.value;
   const amountexpense = parseFloat(amountexpenseInput.value);
+  const expenseType = expenseTypeInput.value;
 
   // Clear value input
   expenseNameInput.value = "";
   amountexpenseInput.value = "";
+  expenseType.value = "";
 
   // Create Object
-  if (expenseName === "" || isNaN(amountexpense) || amountexpense < 0) {
+  if (expenseName === "" || isNaN(amountexpense) || amountexpense < 0 || expenseName === "") {
     alert("The input is invalid.");
     return;
   }
@@ -54,6 +58,7 @@ function addExpense(event) {
   const expense = {
     name: expenseName,
     amount: amountexpense,
+    type: expenseType,
   };
 
   expenses.push(expense);
@@ -74,3 +79,4 @@ expenseList.addEventListener("click", deleteExpense);
 renderExpense();
 
 document.getElementById("designer").innerText = "MeanhorKea";
+

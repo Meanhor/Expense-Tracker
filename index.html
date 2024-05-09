@@ -24,8 +24,18 @@
           placeholder="Amount"
           required
         />
+        <select id="input-type" required>
+            <option value="" disabled selected>Expense Type</option>
+            <option value="Food">Food</option>
+            <option value="Drink">Drink</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Medicine">Medicine</option>
+            <option value="Other">Other</option>
+        </select>
         <button type="submit">Add Expense</button>
       </form>
+
+      
 
       <div class="expense-table">
         <table>
@@ -33,6 +43,7 @@
             <tr>
               <th>Expense Name</th>
               <th>Amount</th>
+              <th>Category</th>
               <th>Action</th>
             </tr>
           </thead>
